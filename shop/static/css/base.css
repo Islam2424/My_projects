@@ -1,0 +1,193 @@
+html,body {
+margin-left: 7px;
+}
+
+#header  {
+padding: 10 0 10 0px;
+font-size: 20px;
+color:green;
+}
+
+#subheader {
+font-size: 20px;
+color:green;
+}
+
+#subheader a {
+font-size: 20px;
+text-decoration:none;
+letter-spacing: 1px;
+color: #4169E1;
+}
+
+#content #sidebar h3 {
+color:#4B0082;
+}
+
+#content #sidebar {
+color:#000;
+}
+
+#content #main .product-list {
+}
+
+#content #main .item img {
+margin-left: 50px;
+max-width: 100px;
+height: auto;
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+font-size:20px;
+padding-bottom:20px;
+}
+
+#content #main {
+margin-left: 5px;
+}
+
+/* Выбор товара */
+#content .product-detail img {
+margin-left: 35px;
+margin-top: 20px;
+width: auto;
+height: 300px;
+}
+
+#content .product-detail h1 {
+color: #000;
+height: auto;
+width: auto;
+}
+
+#content .product-detail h2 a {
+text-decoration:none;
+color: #000;
+}
+
+#content .product-detail input {
+background-color: #4169E1;
+border-radius: 5px;
+border: none;
+padding: 4 4 4 4px;
+}
+
+#content h1 {
+font-family: Times New Roman;
+}
+
+/* Корзина и её содержимое */
+#content .cart thead {
+background-color: #4169E1;
+font-family: Arial;
+color: #fff;
+font-size: 21px;
+letter-spacing: 2px;
+}
+
+#content .body{
+background-color: #97bcf74f;
+}
+
+#content .body img {
+margin-left: 10px;
+width: 90px;
+height: 120px;
+}
+
+#content .body td {
+width: 150px;
+padding: 5 0 0 30px
+}
+
+#content .total {
+background-color: #4169E1;
+font: 24px Arial;
+color: #fff;
+}
+
+#content .next {
+float: right;
+font: 20px  Arial;
+letter-spacing: 1px;
+}
+
+#content .next .a {
+background-color: #34D0B6;
+}
+
+#content .next a{
+padding: 10 15px;
+background-color: #4169E1;
+border-radius: 10px;
+color: #fff;
+text-decoration:none;
+}
+
+/*s Регистрация карты*/
+
+.check {
+margin: 10 0 10 20px;
+font: 58px Arial;
+}
+
+.order-info {
+width: 630px;
+float: right;
+margin: 20 70 0 0px;
+background-color: #97bcf74f;
+border-radius: 10px;
+box-shadow: 0 4px 16px #ccc;
+}
+.order-info h3 {
+padding: 0 280 0 30px;
+font-size: 40px;
+font-family: Arial;
+}
+
+.order-info li {
+margin: 10 20 0 35px;
+}
+
+.order-info li span {
+float: right;
+}
+
+.order-info p {
+float: right;
+font-size: 20px;
+font-weight: 600;
+margin: 70 20 30 20px;
+}
+
+.order-form {
+width: 200px;
+margin: 10px;
+font-size: 18px;
+font-style: italic;
+}
+
+.order-form p input {
+padding: 10 0 10 20px;
+background-color: #97bcf74f;
+border-radius: 5px;
+text-decoration:none;
+font-size: 20px;
+}
+
+.order-form p input[type="submit"] {
+background-color: #4169E1;
+border: none;
+font: 25px Arial;
+color: #fff;
+}
+
+.order-form p input[value="Place order"] {
+padding: 10 30 10 30px;
+}
+
+/* Статус заявки */
+.status {
+font: 30px Arial;
+
+}
