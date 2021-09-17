@@ -1,0 +1,17 @@
+
+#header {
+padding-top: 25px;
+height: 70px;
+background-color: green;
+}
+
+#header .logo {
+color: #fff;
+font-size: 38px;
+font-family: Times New Roman;
+margin: 120px;
+}
+
+#content {
+padding-left: 90px;
+}
