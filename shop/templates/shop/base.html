@@ -7,18 +7,18 @@
     </head>
     <body>
     <div id="header">
-        <a  class="logo" >Shop</a>
+        <a  class="logo" >Магазин</a>
     </div>
     <div id="subheader">
         {% with total_items=cart|length %}
         {% if cart|length > 0 %}
-            Your cart:
+            Ваша корзина:
             <a href="{% url 'cart:cart_detail' %}">
-                {{ total_items }} item{{ total_items|pluralize }},
+                {{ total_items }} вещи{{ total_item|pluralize }},
                 {{ cart.get_total_price }} ₽
             </a>
         {% else %}
-        Your cart is empty
+        Ваша корзина пуста =(
         {% endif %}
     {% endwith %}
     </div>

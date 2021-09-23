@@ -20,32 +20,6 @@ letter-spacing: 1px;
 color: #4169E1;
 }
 
-#content #sidebar h3 {
-color:#4B0082;
-}
-
-#content #sidebar {
-color:#000;
-}
-
-#content #main .product-list {
-}
-
-#content #main .item img {
-margin-left: 50px;
-max-width: 100px;
-height: auto;
-display:flex;
-justify-content:space-between;
-margin-top:20px;
-font-size:20px;
-padding-bottom:20px;
-}
-
-#content #main {
-margin-left: 5px;
-}
-
 /* Выбор товара */
 #content .product-detail img {
 margin-left: 35px;
@@ -65,45 +39,54 @@ text-decoration:none;
 color: #000;
 }
 
+#content .product-detail form {
+font-size: 20px;
+padding: 4px;
+}
+
 #content .product-detail input {
-background-color: #4169E1;
+border-color: #571d8c;
 border-radius: 5px;
-border: none;
-padding: 4 4 4 4px;
+padding: 4px;
 }
 
 #content h1 {
-font-family: Times New Roman;
+font: 28 Times New Roman;
 }
 
 /* Корзина и её содержимое */
-#content .cart thead {
+.cart thead {
 background-color: #4169E1;
 font-family: Arial;
 color: #fff;
-font-size: 21px;
+font-size: 24px;
 letter-spacing: 2px;
 }
 
 #content .body{
-background-color: #97bcf74f;
+font-size: 17px;
+background-color: #9fc0f7;
 }
 
 #content .body img {
-margin-left: 10px;
-width: 90px;
-height: 120px;
+width: 120px;
+height: 150px;
 }
 
 #content .body td {
 width: 150px;
-padding: 5 0 0 30px
+padding: 10 0 10 40px
 }
 
 #content .total {
 background-color: #4169E1;
+letter-spacing: 2px;
 font: 24px Arial;
 color: #fff;
+}
+
+#content .total td{
+padding: 20 0 20 30px;
 }
 
 #content .next {
@@ -117,7 +100,7 @@ background-color: #34D0B6;
 }
 
 #content .next a{
-padding: 10 15px;
+ padding: 10 15px;
 background-color: #4169E1;
 border-radius: 10px;
 color: #fff;
