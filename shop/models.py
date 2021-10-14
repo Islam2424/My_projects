@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True)
-    slug = models.SlugField(max_length=255,unique=True)
+    slug = models.SlugField(max_length=255,unique=True,)
 
     def get_absolute_url(self):
         return reverse('shop:product_list_by_category', args=[self.slug])
