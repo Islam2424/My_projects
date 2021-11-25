@@ -1,7 +1,7 @@
 
 import os
 from pathlib import Path
-#from braintree import Configuration, Environment
+from braintree import Configuration, Environment
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
-#    'payment.apps.PaymentConfig'
+    'payment.apps.PaymentConfig',
 
 ]
 
@@ -133,17 +133,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-CELERY_BROKER_URL = "amqp://127.0.0.1:15672/0"
-CELERY_RESULT_BACKEND = "amqp://127.0.0.1:15672/0"
+CELERY_BROKER_URL = "amqp://guest:**@1127.0.0.1:15672/0"
+CELERY_RESULT_BACKEND = "amqp://guest:**@1127.0.0.1:15672/0"
 
 # Настройки Braintree.
-# BRAINTREE_MERCHANT_ID = '989qvg42scrt262d' # ID продавца.
-# BRAINTREE_PUBLIC_KEY = 'sxyfg9sbvp9x4yds' # Публичный ключ.
-# BRAINTREE_PRIVATE_KEY = '4d034cdcbc1da1a41d6697543ee136f2' # Секретный ключ.
+BRAINTREE_MERCHANT_ID = '989qvg42scrt262d' # ID продавца.
+BRAINTREE_PUBLIC_KEY = 'sxyfg9sbvp9x4yds' # Публичный ключ.
+BRAINTREE_PRIVATE_KEY = '4d034cdcbc1da1a41d6697543ee136f2' # Секретный ключ.
 
-# Configuration.configure( #для боевого режима и заменить эту строку на Environment.Production. Также нуж-но будет указать новые ID, секретный и публичный ключи, соответствующие аккаунту.
-#                         Environment.Sandbox,
-#                         BRAINTREE_MERCHANT_ID,
-#                         BRAINTREE_PUBLIC_KEY,
-#                         BRAINTREE_PRIVATE_KEY
-#                         )
+Configuration.configure( #для боевого режима и заменить эту строку на Environment.Production. Также нуж-но будет указать новые ID, секретный и публичный ключи, соответствующие аккаунту.
+                        Environment.Sandbox,
+                        BRAINTREE_MERCHANT_ID,
+                        BRAINTREE_PUBLIC_KEY,
+                        BRAINTREE_PRIVATE_KEY
+                        )
