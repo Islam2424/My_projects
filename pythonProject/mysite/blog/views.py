@@ -1,8 +1,11 @@
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 
-from .forms import EmailPostForm, CommentForm, SearchForm
+from .forms import EmailPostForm, CommentForm, SearchForm, LoginForm, UserRegistrationForm
 from haystack.query import SearchQuerySet
 from .models import Post, Comment
 
@@ -66,9 +69,31 @@ def post_search(request):
             cd = form.cleaned_data
             results = SearchQuerySet().models(Post).filter(content=cd['query']).load_all()
             total_results = results.count()
-    return render(request,
-                  'post/search.html',
-                  {'form': form,
-                   'cd': cd,
-                   'results': results,
-                   'total_results': total_results})
+    return render(request, 'post/search.html', {'form': form,
+                                                'cd': cd,
+                                                'results': results,
+                                                'total_results': total_results})
+
+
+@login_required
+def dashboard(request):
+    return render(request, 'registration/dashboard.html', {'section': dashboard})
+
+
+def user_login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(username=cd['username'], password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponse('AUTh')
+                else:
+                    return HttpResponse('No Ok')
+            else:
+                return render(request, 'registration/login.html', {'form': form})
+    else:
+        form = LoginForm()
+    return render(request, 'registration/login.html', {'form': form})
