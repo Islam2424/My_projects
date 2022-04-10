@@ -1,9 +1,6 @@
 from django import forms
-<<<<<<< HEAD
 from django.contrib.auth.models import User
 
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
 from .models import Comment
 
 
@@ -19,7 +16,6 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('name', 'body')
 
-<<<<<<< HEAD
 
 class SearchForm(forms.Form):
     query = forms.CharField()
@@ -43,5 +39,3 @@ class UserRegistrationForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7

@@ -1,9 +1,6 @@
 {% extends 'blog/base.html' %}
-<<<<<<< HEAD
 {% load blog_tags %}
 
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
 {% block title %} My blog {% endblock %}
 {% block content %}
   <h1>Okey Blog</h1>
@@ -12,11 +9,7 @@
       <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
     </h2>
     <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
-<<<<<<< HEAD
     {{ post.body|markdown|truncatewords_html:30 }}
-=======
-    {{ post.body|truncatewords:30|linebreaks }}
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
   {% endfor %}
   {% include 'pagination.html' with page=page_obj %}
 {% endblock %}

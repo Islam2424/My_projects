@@ -1,18 +1,11 @@
 {% extends 'blog/base.html' %}
-<<<<<<< HEAD
 {% load blog_tags %}
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
 
 {% block title %} {{ post.title }} {% endblock %}
 {% block content %}
   <h1>{{ post.title }}</h1>
   <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
-<<<<<<< HEAD
   {{ post.body|markdown }}
-=======
-  {{ post.body|linebreaks }}
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
   <p>
     <a href="{% url 'blog:post_share' post.id %}">Share this post</a>
   </p>

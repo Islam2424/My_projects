@@ -13,11 +13,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-<<<<<<< HEAD:mysite/mysite/settings.py
 from django.urls import reverse_lazy
 
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7:myshopp/settings.py
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -44,13 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-<<<<<<< HEAD:mysite/mysite/settings.py
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'haystack',
 
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7:myshopp/settings.py
 ]
 
 MIDDLEWARE = [
@@ -89,27 +83,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-<<<<<<< HEAD:mysite/mysite/settings.py
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blog',
-        'USER': 'islam',
-        'PASSWORD': '23Fb&@lk!ksKL$24KloPfdF54$%',
-        'HOST': 'localhost',
-        'PORT': '5432',
-=======
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7:myshopp/settings.py
     }
 }
 
 
-<<<<<<< HEAD:mysite/mysite/settings.py
-=======
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7:myshopp/settings.py
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -144,7 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD:mysite/mysite/settings.py
 
 HAYSTACK_CONNECTIONS = {
     'default': {
@@ -156,9 +137,6 @@ HAYSTACK_CONNECTIONS = {
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
-=======
-
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7:myshopp/settings.py
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

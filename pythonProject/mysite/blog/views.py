@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
@@ -8,13 +7,6 @@ from django.views.generic import ListView
 
 from .forms import EmailPostForm, CommentForm, SearchForm, LoginForm, UserRegistrationForm
 from haystack.query import SearchQuerySet
-=======
-from django.core.mail import send_mail
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView
-
-from .forms import EmailPostForm, CommentForm
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
 from .models import Post, Comment
 
 
@@ -67,7 +59,6 @@ def post_share(request, post_id):
     else:
         form = EmailPostForm()
         return render(request, 'post/share.html', {'post': post, 'form': form, 'sent': sent})
-<<<<<<< HEAD
 
 
 def post_search(request):
@@ -106,5 +97,3 @@ def user_login(request):
     else:
         form = LoginForm()
     return render(request, 'registration/login.html', {'form': form})
-=======
->>>>>>> be8bda85bcc865affa2b67d8e65a6c9ffd05e4d7
