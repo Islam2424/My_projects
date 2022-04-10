@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Share a post{% endblock %}
+
+{% block content %}
+        <h1>E-mail successfully sent</h1>
+        <p>"{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }}.</p
+      <h1></h1>
+{% endblock %}
